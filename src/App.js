@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Root from "./Containers/Root.dev";
+import Root from "./Root.dev";
 
 function App() {
   return <Root/>

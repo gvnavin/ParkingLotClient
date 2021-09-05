@@ -2,11 +2,11 @@ import * as React from "react";
 import {Route, Switch} from "react-router-dom";
 import {routePaths} from "./RouteConstants";
 import AppLayoutTemplate from "../AppLayoutTemplate";
-import Dashboard from "../Containers/Dashboard/Dashboard";
-import Analytics from "../Containers/Analytics/Analytics";
-import CloseDispatch from "../Containers/CloseDispatch/CloseDispatch";
-import CreateDemandAndDispatch from "../Containers/CreateDemandAndDispatch/CreateDemandAndDispatch";
-import CreateSupply from "../Containers/CreateSupply/CreateSupply";
+import Dashboard from "../Containers/Admin/Dashboard/Dashboard";
+import Analytics from "../Containers/Admin/Analytics/Analytics";
+import CloseDispatch from "../Containers/Client/CloseDispatch/CloseDispatch";
+import CreateDemandAndDispatch from "../Containers/Client/CreateDemandAndDispatch/CreateDemandAndDispatch";
+import CreateSupply from "../Containers/Admin/CreateSupply/CreateSupply";
 import {AdminNavList} from "./AdminNavList";
 import {ClientNavList} from "./ClientNavList";
 

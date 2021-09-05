@@ -1,5 +1,5 @@
 import React, {useReducer} from "react";
-import {useCreateDemand} from "../../ReactQueryHooks/useCreateDemand";
+import {useCreateDemand} from "../../../ReactQueryHooks/useCreateDemand";
 import {CloseDispatchFormUI} from "./CloseDispatchFormUI";
 
 export function CloseDispatchForm() {
