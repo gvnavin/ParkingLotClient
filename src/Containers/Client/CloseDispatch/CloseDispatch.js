@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Grid from "@material-ui/core/Grid";
 import {Typography} from "@material-ui/core";
-import {CloseDispatchForm} from "./CloseDispatchForm";
+import {CloseDispatchForm} from "./Components/CloseDispatchForm";
 
 export default function CloseDispatch() {
   return (

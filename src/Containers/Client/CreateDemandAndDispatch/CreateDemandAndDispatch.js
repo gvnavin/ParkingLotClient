@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Grid from "@material-ui/core/Grid";
 import {Typography} from "@material-ui/core";
-import {CreateDemandAndDispatchForm} from "./CreateDemandAndDispatchForm";
+import {CreateDemandAndDispatchForm} from "./Components/CreateDemandAndDispatchForm";
 
 export default function CreateDemandAndDispatch() {
   return (

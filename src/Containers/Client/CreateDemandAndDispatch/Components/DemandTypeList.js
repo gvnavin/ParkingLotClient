@@ -1,7 +1,7 @@
 import {FormControl, FormHelperText, InputLabel, MenuItem} from "@material-ui/core";
 import Select from "@material-ui/core/Select";
 import React from "react";
-import {demandType} from "../../../Constants/Constants";
+import {demandType} from "../../../../Constants/Constants";
 
 export function DemandTypeList({handleInput, formInput}) {
   return (

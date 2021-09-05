@@ -1,13 +1,12 @@
 import React, {useReducer} from "react";
-import {useCreateDemand} from "../../../ReactQueryHooks/useCreateDemand";
-import {CreateDemandAndDispatchFormUI} from "./CreateDemandAndDispatchFormUI";
+import {useCreateDemand} from "../../../../ReactQueryHooks/useCreateDemand";
+import {CloseDispatchFormUI} from "./CloseDispatchFormUI";
 
-export function CreateDemandAndDispatchForm() {
+export function CloseDispatchForm() {
     const [formInput, setFormInput] = useReducer(
         (state, newState) => ({...state, ...newState}),
         {
-            vehicleId: "",
-            vehicleColor: "",
+            dispatchId: "",
         }
     );
 
@@ -20,8 +19,7 @@ export function CreateDemandAndDispatchForm() {
         console.log("handleSubmit data : ", data)
 
         const demand = {
-            vehicleId: formInput.vehicleId,
-            vehicleColor: formInput.vehicleColor,
+            dispatchId: formInput.dispatchId,
         }
         mutation.mutate(demand);
     };
@@ -33,7 +31,7 @@ export function CreateDemandAndDispatchForm() {
         setFormInput({[name]: newValue});
     };
 
-    return <CreateDemandAndDispatchFormUI
+    return <CloseDispatchFormUI
         handleSubmit={handleSubmit}
         handleInput={handleInput}
         formInput={formInput}
