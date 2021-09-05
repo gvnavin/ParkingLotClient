@@ -7,6 +7,6 @@ export const routePaths = {
   createSupply: "/admin/createSupply",
 
   client: "/client",
-  closeDemand: "/client/closeDemand",
-  createDemand: "/client/createDemand",
+  closeDispatch: "/client/closeDispatch",
+  createDemandAndDispatch: "/client/createDemandAndDispatch",
 }

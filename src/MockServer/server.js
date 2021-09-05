@@ -22,7 +22,7 @@ export function makeServer({environment = "test"} = {}) {
 
             this.passthrough("https://dev-dsk-gnavin-1a-4c467a7a.eu-west-1.amazon.com:8443" + PATH.postCustomerTextAndGetResponse)
 
-            this.get(PATH.triggerConversation, (schema) => {
+            this.get(PATH.createDemand, (schema) => {
                     console.log("Navin, miraje makeServer this.get triggerConversation")
                 },
                 {timing: 1000}

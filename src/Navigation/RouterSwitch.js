@@ -4,8 +4,8 @@ import {routePaths} from "./RouteConstants";
 import AppLayoutTemplate from "../AppLayoutTemplate";
 import Dashboard from "../Containers/Dashboard/Dashboard";
 import Analytics from "../Containers/Analytics/Analytics";
-import CloseDemand from "../Containers/CloseDemand/CloseDemand";
-import CreateDemand from "../Containers/CreateDemand/CreateDemand";
+import CloseDispatch from "../Containers/CloseDispatch/CloseDispatch";
+import CreateDemandAndDispatch from "../Containers/CreateDemandAndDispatch/CreateDemandAndDispatch";
 import CreateSupply from "../Containers/CreateSupply/CreateSupply";
 import {AdminNavList} from "./AdminNavList";
 import {ClientNavList} from "./ClientNavList";
@@ -44,21 +44,21 @@ export default function RouterSwitch() {
         </AppLayoutTemplate>
       </Route>
 
-      <Route path={routePaths.client}>
+      <Route exact path={routePaths.client}>
         <AppLayoutTemplate title={"Demand Management tool"} navlist={<ClientNavList/>}>
-          <CloseDemand/>
+          <CloseDispatch/>
         </AppLayoutTemplate>
       </Route>
 
-      <Route exact path={routePaths.closeDemand}>
+      <Route exact path={routePaths.closeDispatch}>
         <AppLayoutTemplate title={"Demand Management tool"} navlist={<ClientNavList/>}>
-          <CloseDemand/>
+          <CloseDispatch/>
         </AppLayoutTemplate>
       </Route>
 
-      <Route exact path={routePaths.createDemand}>
+      <Route exact path={routePaths.createDemandAndDispatch}>
         <AppLayoutTemplate title={"Demand Management tool"} navlist={<ClientNavList/>}>
-          <CreateDemand/>
+          <CreateDemandAndDispatch/>
         </AppLayoutTemplate>
       </Route>
 

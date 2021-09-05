@@ -1,20 +1,14 @@
 import {PATH} from "./Path";
+import {getEndPoint} from "./HostEndPoints";
 
 const axios = require("axios");
 
-export async function get() {
-  let initialIntent = await axios
-    .get(PATH.triggerConversation)
+export async function createDemand(demand) {
+  return await axios.post(getEndPoint() + PATH.createDemand, demand)
     .then(res => res.data);
-  return initialIntent
 }
 
-export async function post(intentType, userSelectedRecommendationType) {
-  let response = await axios
-    .post(PATH.postUserSelectedRecommendationAndGetResponse, {
-      intentType: intentType,
-      userSelectedRecommendationType: userSelectedRecommendationType
-    })
+export async function closeDispatch(id) {
+  return await axios.post(getEndPoint() + PATH.closeDispatch, id)
     .then(res => res.data);
-  return response
 }
