@@ -1,8 +1,6 @@
 export const PATH = {
-  createDemand: 'triggerConversation',
+  createDemand: 'createDemand',
   closeDispatch: 'closeDispatch',
   createSupply: 'createSupply',
-  postUserSelectedRecommendationAndGetResponse: 'postUserSelectedRecommendationAndGetResponse',
-  postCustomerTextAndGetResponse: '/v0/postCustomerTextAndGetResponse',
   findDispatchEntitiesByFilter: 'dispatch/start/type/'
 }

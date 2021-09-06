@@ -1,5 +1,6 @@
 import {createServer, Model} from "miragejs";
 import {PATH} from "../API/Path";
+import {HostEndPoints} from "../API/HostEndPoints";
 
 const userSelectedOptionToResponse = new Map([
 
@@ -15,21 +16,21 @@ export function makeServer({environment = "test"} = {}) {
         },
 
         seeds(server) {
-            server.create("triggerConversation", {})
+            server.create(PATH.createSupply, {})
         },
 
         routes() {
 
-            this.passthrough("https://dev-dsk-gnavin-1a-4c467a7a.eu-west-1.amazon.com:8443" + PATH.postCustomerTextAndGetResponse)
+            this.passthrough(HostEndPoints.localHost8080 + PATH.createDemand)
 
             this.get(PATH.createDemand, (schema) => {
-                    console.log("Navin, miraje makeServer this.get triggerConversation")
+                    console.log("Navin, miraje makeServer this.get")
                 },
                 {timing: 1000}
             )
 
-            this.post(PATH.postUserSelectedRecommendationAndGetResponse, (schema, request) => {
-                console.log("Navin, miraje makeServer this.get triggerConversation")
+            this.post(PATH.createDemand, (schema, request) => {
+                console.log("Navin, miraje makeServer this.get")
             })
         }
     })
