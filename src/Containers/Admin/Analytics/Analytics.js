@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Grid from "@material-ui/core/Grid";
 import {Typography} from "@material-ui/core";
+import {FilterForm} from "./Component/FilterForm";
 
 export default function Analytics() {
   return (
@@ -11,6 +12,7 @@ export default function Analytics() {
         </Typography>
       </Grid>
       <Grid item xs={12}>
+        <FilterForm/>
       </Grid>
     </Grid>
   );

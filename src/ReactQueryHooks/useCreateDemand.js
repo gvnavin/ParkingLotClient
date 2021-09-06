@@ -6,17 +6,17 @@ export function useCreateDemand() {
         (intent) =>  createDemand(intent),
         {
             onSuccess: () => {
-                console.log("useMutation useSaveIntent onSuccess")
-                window.alert("SaveIntent Saved")
+                console.log("useCreateDemand useMutation useSaveIntent onSuccess")
+                window.alert("useCreateDemand useMutation Demand Created")
             },
             onError: (error) => {
                 window.alert(error.response.data.message)
             },
             onSettled: () => {
-                console.log("useMutation useSaveIntent onSettled")
+                console.log("useCreateDemand useMutation onSettled")
             },
         }
     )
-    console.log("useSaveIntent mutation : " , mutation)
+    console.log("useCreateDemand mutation : " , mutation)
     return mutation
 }

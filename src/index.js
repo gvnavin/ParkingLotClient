@@ -6,9 +6,9 @@ import reportWebVitals from './reportWebVitals';
 
 import { makeServer } from "./MockServer/server"
 
-if (process.env.NODE_ENV === "development") {
-  makeServer({ environment: "development" })
-}
+// if (process.env.NODE_ENV === "development") {
+//   makeServer({ environment: "development" })
+// }
 
 ReactDOM.render(
   <React.StrictMode>

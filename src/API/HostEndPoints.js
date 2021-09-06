@@ -1,6 +1,6 @@
 
 export const HostEndPoints = {
-    localHost8080: "https://local.amazon.com:8080/",
+    localHost8080: "http://local.amazon.com:8080/",
 }
 
 const endPointMapping = {
