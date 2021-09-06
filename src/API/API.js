@@ -4,7 +4,24 @@ import {getEndPoint} from "./HostEndPoints";
 const axios = require("axios");
 
 export async function createDemand(demand) {
-  return await axios.post(getEndPoint() + PATH.createDemand, demand)
+
+  const demandRequest = [{
+    type: demand.demandType,
+    entityAsJson: JSON.stringify(
+      {
+        _id: demand.vehicleId,
+        color: demand.vehicleColor,
+        owner: "owner"
+      }
+    )
+  }]
+
+  return await axios.post(getEndPoint() + PATH.createDemand + demand.demandType, demandRequest)
+    .then(res => res.data);
+}
+
+export async function dispatchDemand(demand) {
+  return await axios.post(getEndPoint() + PATH.dispatchDemand + demand.demandId, {})
     .then(res => res.data);
 }
 
